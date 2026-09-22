@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
 import { ComingSoon } from "@/components/media/coming-soon";
+import { RecentSongsWidget } from "@/components/media/recent-songs-widget";
 import { SongCard } from "@/components/media/song-card";
 import { SectionSkeleton, Section } from "@/components/media/section";
 import { getPagedSongs } from "@/lib/paged-songs";
@@ -64,6 +65,7 @@ export default function SongsLandingPage() {
       <Suspense fallback={<SectionSkeleton title="New songs" />}>
         <NewSongs />
       </Suspense>
+      <RecentSongsWidget />
       <ComingSoon title="Your favorites" />
       <ComingSoon title="Recommended for you" />
     </div>
